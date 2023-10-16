@@ -41,14 +41,14 @@ namespace Preventimark
 
         private void VerifNombre(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(numInput1_Copy2.Text) || string.IsNullOrEmpty(numInput1_Copy1.Text) || string.IsNullOrEmpty(numInput1_Copy.Text))
+            if (string.IsNullOrEmpty(textboxage.Text) || string.IsNullOrEmpty(textboxprenom.Text) || string.IsNullOrEmpty(textboxnom.Text))
             {
                 MessageBox.Show("Veuillez renseigner toutes vos informations", "Erreur champs", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             int age;
-            if (int.TryParse(numInput1_Copy2.Text, out age))
+            if (int.TryParse(textboxage.Text, out age))
             {
-                if (string.IsNullOrEmpty(numInput1_Copy2.Text) || string.IsNullOrEmpty(numInput1_Copy1.Text) || string.IsNullOrEmpty(numInput1_Copy.Text) || (age < 18))
+                if (string.IsNullOrEmpty(textboxage.Text) || string.IsNullOrEmpty(textboxprenom.Text) || string.IsNullOrEmpty(textboxnom.Text) || (age < 18))
                 {
                     MessageBox.Show("Il faut être majeur pour jouer", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
@@ -57,11 +57,11 @@ namespace Preventimark
                     int[] Numeros = new int[5];
                     try
                     {
-                        Numeros[0] = int.Parse(numInput1.Text);
-                        Numeros[1] = int.Parse(numInput2.Text);
-                        Numeros[2] = int.Parse(numInput3.Text);
-                        Numeros[3] = int.Parse(numInput4.Text);
-                        Numeros[4] = int.Parse(numInput5.Text);
+                        Numeros[0] = int.Parse(grille_1.Text);
+                        Numeros[1] = int.Parse(grille_2.Text);
+                        Numeros[2] = int.Parse(grille_3.Text);
+                        Numeros[3] = int.Parse(grille_4.Text);
+                        Numeros[4] = int.Parse(grille_5.Text);
                     }
                     catch (FormatException)
                     {
